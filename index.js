@@ -13,7 +13,7 @@ const { v4: uuidv4 } = require('uuid');
 const fs = require('fs');
 
 const app = express();
-const PORT = 3000;
+const PORT = 3306;
 const SECRET = process.JWT_SECRET || '2482000';
 
 // =====================================
@@ -33,10 +33,10 @@ app.use('/uploads', express.static('uploads'));
 // DATABASE
 // =====================================
 const db = mysql.createConnection({
-  host: 'localhost',
+  host: '${{RAILWAY_PRIVATE_DOMAIN}}',
   user: 'root',
-  password: '',
-  database: 'agrilebanon'
+  password: 'ilYgyrNcbAsrBHZEVUdRCucBGSFKMOHx',
+  database: 'railway'
 });
 
 db.connect(err => {
