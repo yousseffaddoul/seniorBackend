@@ -13,7 +13,7 @@ const { v4: uuidv4 } = require('uuid');
 const fs = require('fs');
 
 const app = express();
-const PORT = 3306;
+const PORT = 3000;
 const SECRET = process.JWT_SECRET || '2482000';
 
 // =====================================
@@ -33,10 +33,10 @@ app.use('/uploads', express.static('uploads'));
 // DATABASE
 // =====================================
 const db = mysql.createConnection({
-  host: 'sql112.infinityfree.com',
-  user: 'if0_40847925',
-  password: '59mr5CFumolLQEn',
-  database: 'if0_40847925_agri_lebanon'
+  host: 'localhost',
+  user: 'root',
+  password: '',
+  database: 'agrilebanon'
 });
 
 db.connect(err => {
