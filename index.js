@@ -33,10 +33,10 @@ app.use('/uploads', express.static('uploads'));
 // DATABASE
 // =====================================
 const db = mysql.createConnection({
-  host: '${{RAILWAY_PRIVATE_DOMAIN}}',
-  user: 'root',
-  password: 'ilYgyrNcbAsrBHZEVUdRCucBGSFKMOHx',
-  database: 'railway'
+  host: 'sql112.infinityfree.com',
+  user: 'if0_40847925',
+  password: '59mr5CFumolLQEn',
+  database: 'if0_40847925_agri_lebanon'
 });
 
 db.connect(err => {
